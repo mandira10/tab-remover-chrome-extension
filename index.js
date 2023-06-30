@@ -29,7 +29,7 @@ stabBtn.addEventListener("click", function () {
             datetime: currentDate.toLocaleString()
         };
 
-        if (!isDuplicate(tabData.url, tabData.datetime) && !tabs[i].url.startsWith("chrome")) {
+        if (!isDuplicate(tabData.url, tabData.datetime) && !tabs[0].url.startsWith("chrome")) {
             myLeads.push(tabData);
             localStorage.setItem("myLeads", JSON.stringify(myLeads))
             render(myLeads)
@@ -48,7 +48,7 @@ sctabBtn.addEventListener("click", function () {
             datetime: currentDate.toLocaleString()
         };
 
-        if (!isDuplicate(tabData.url, tabData.datetime) && !tabs[i].url.startsWith("chrome")) {
+        if (!isDuplicate(tabData.url, tabData.datetime) && !tabs[0].url.startsWith("chrome")) {
             myLeads.push(tabData);
         }
         chrome.tabs.remove(tabs[0].id);
